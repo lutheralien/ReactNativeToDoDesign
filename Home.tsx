@@ -10,41 +10,41 @@ import {View, Text, StyleSheet} from 'react-native';
 const Home: React.FC = () => {
   // const isDarkMode = useColorScheme() === 'dark';
   return (
-    <View style={styles.mainContainer}>
-      <View style={styles.container}>
-        <View style={styles.head}>
-          <View style={styles.box1}>
-            <View style={styles.toDoContent}>
-              <Text style={styles.box1h3}>To do list</Text>
-              <Text style={styles.box1h4}>
+    <View>
+      <View>
+        <View>
+          <View>
+            <View>
+              <Text>To do list</Text>
+              <Text>
                 Today <FontAwesomeIcon icon={faXbox} />
               </Text>
             </View>
           </View>
-          <View style={styles.box2}>
-            <View style={styles.box2Iconcontainer}>
+          <View>
+            <View>
               <FontAwesomeIcon icon={faXbox} />
               <Text>Dashboard project for school</Text>
             </View>
           </View>
-          <View style={styles.box3}>
-            <View style={styles.box3Iconcontaner}>
+          <View>
+            <View>
               <FontAwesomeIcon icon={faXbox} />
               <Text>Meeting Mr. Brian O' Conor</Text>
             </View>
           </View>
-          <View style={styles.box4}>
-            <View style={styles.box4Iconcontaner}>
+          <View>
+            <View>
               <FontAwesomeIcon icon={faXbox} />
               <Text>Go to Bank office</Text>
             </View>
           </View>
         </View>
-        <View style={styles.foot}>
-          <View style={styles.boxf1}>
+        <View>
+          <View>
             <Text>Past Activity</Text>
           </View>
-          <View style={styles.boxf2}>
+          <View>
             <Text>5 Mon</Text>
             <Text>Strikom Library Project</Text>
           </View>
