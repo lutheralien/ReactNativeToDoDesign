@@ -1,72 +1,73 @@
 /* eslint-disable prettier/prettier */
 import {faXbox} from '@fortawesome/free-brands-svg-icons';
-import {faHeart} from '@fortawesome/free-regular-svg-icons';
-import {faHouse} from '@fortawesome/free-solid-svg-icons';
+import {faCalendar} from '@fortawesome/free-regular-svg-icons';
+import {faBellSlash, faBuilding, faHeartPulse, faHouse, faLocationDot, faPlusCircle, faTicketSimple, faUserAlt} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import React from 'react';
 
 import {View, Text, StyleSheet} from 'react-native';
 
 const Home: React.FC = () => {
-  // const isDarkMode = useColorScheme() === 'dark';
   return (
-    <View>
-      <View>
-        <View>
-          <View>
-            <View>
-              <Text>To do list</Text>
-              <Text>
-                Today <FontAwesomeIcon icon={faXbox} />
+    <View style={styles.mainContainer}>
+      <View style={styles.container}>
+        <View style={styles.head}>
+          <View style={styles.box1}>
+            <View style={styles.toDoContent}>
+              <Text style={styles.toDoContenth3}>To do list</Text>
+              <Text style={styles.toDoContenth4}>
+                Today <FontAwesomeIcon icon={faCalendar} style={styles.toDoContenth4iconContainer}/>
               </Text>
             </View>
           </View>
-          <View>
-            <View>
-              <FontAwesomeIcon icon={faXbox} />
-              <Text>Dashboard project for school</Text>
+          <View style={styles.box2}>
+            <View style={styles.boxIconcontainer}>
+              <FontAwesomeIcon icon={faTicketSimple} style={styles.fontAwesomeBox} />
+              <Text style={styles.boxText}>Dashboard project for school</Text>
             </View>
           </View>
-          <View>
-            <View>
-              <FontAwesomeIcon icon={faXbox} />
-              <Text>Meeting Mr. Brian O' Conor</Text>
+          <View style={styles.box3}>
+            <View style={styles.boxIconcontainer}>
+              <FontAwesomeIcon icon={faLocationDot} style={styles.fontAwesomeBox}/>
+              <Text style={styles.boxText}>Meeting Mr. Brian O' Conor</Text>
             </View>
           </View>
-          <View>
-            <View>
-              <FontAwesomeIcon icon={faXbox} />
-              <Text>Go to Bank office</Text>
+          <View style={styles.box4}>
+            <View style={styles.boxIconcontainer}>
+              <FontAwesomeIcon icon={faBuilding} style={styles.fontAwesomeBox}/>
+              <Text style={styles.boxText}>Go to Bank office</Text>
             </View>
           </View>
         </View>
-        <View>
-          <View>
-            <Text>Past Activity</Text>
+        <View style={styles.foot}>
+          <View style={styles.boxf1}>
+            <Text style={styles.boxf1Text}>Past Activity</Text>
           </View>
-          <View>
-            <Text>5 Mon</Text>
+          <View style={styles.boxf2}>
+            <Text style={styles.boxfText}>5 Mon</Text>
             <Text>Strikom Library Project</Text>
+            <Text style={styles.pseudoMissing}>Missing</Text>
           </View>
           <View style={styles.boxf3}>
-            <Text>5 Mon</Text>
+            <Text style={styles.boxfText}>5 Mon</Text>
             <Text>Design Thinking Workshop</Text>
+            <Text style={styles.pseudoSucces}>Success</Text>
           </View>
           <View style={styles.boxf4}>
             <View>
-              <FontAwesomeIcon icon={faHouse} />
+              <FontAwesomeIcon icon={faHouse} size={30}/>
             </View>
             <View>
-              <FontAwesomeIcon icon={faHeart} />
+              <FontAwesomeIcon icon={faHeartPulse}  size={30}/>
             </View>
             <View>
-              <FontAwesomeIcon icon={faHeart} />
+              <FontAwesomeIcon icon={faPlusCircle} size={30}/>
             </View>
             <View>
-              <FontAwesomeIcon icon={faHouse} />
+              <FontAwesomeIcon icon={faBellSlash} size={30}/>
             </View>
             <View>
-              <FontAwesomeIcon icon={faHouse} />
+              <FontAwesomeIcon icon={faUserAlt} size={30}/>
             </View>
           </View>
         </View>
@@ -80,186 +81,187 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 100,
+    flex: 1,
   },
   container: {
     backgroundColor: 'rgb(11, 11, 66)',
-    height: 100,
-    width: 40,
+    flex: 1,
+    width: '100%',
   },
   head: {
-    height: 50,
+    flex: 1,
     backgroundColor: 'rgb(11, 11, 66)',
-    width: 100,
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: 10,
-    justifyContent: 'center',
+    width: '100%',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    marginBottom: 10,
   },
   foot: {
-    height: 50,
+    flex: 1,
     backgroundColor: 'rgb(11, 11, 66)',
-    width: 100,
+    width: '100%',
     paddingTop: 10,
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: 10,
     justifyContent: 'space-between',
+    alignItems: 'center',
+
   },
   box1: {
     height: 60,
-    width: 90,
-    // margin: '0 auto',
+    width: '100%',
+    marginHorizontal: 'auto',
+    marginTop: 0,
     marginBottom: 10,
     color: '#fff',
-  },
-  box1h3: {
-    position: 'relative',
-    top: 0,
-    left: -49,
-  },
-  box1h4: {
-    position: 'relative',
-    top: 0,
-    right: -43,
   },
   box2: {
     height: 60,
     backgroundColor: '#fff',
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 90,
-    // margin: 0 auto,
+    width: '90%',
+    marginTop: 0,
+    marginHorizontal: 'auto',
     marginBottom: 10,
     borderRadius: 10,
   },
-  box2Iconcontainer: {
-    position: 'relative',
-    right: 70,
+  boxText: {
+    color: '#333',
+    marginRight: 20,
+  },
+  fontAwesomeBox: {
+    marginRight: 30,
+  },
+  boxIconcontainer: {
+    flexDirection: 'row',
   },
   box3: {
     height: 60,
     backgroundColor: '#fff',
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 90,
-    // margin: 0 auto,
+    width: '90%',
+    marginTop: 0,
+    marginHorizontal: 'auto',
     marginBottom: 10,
     borderRadius: 10,
   },
-  box3Iconcontaner: {
-    position: 'relative',
-    right: 70,
+  box3Text: {
+    color: '#333',
   },
   box4: {
     height: 60,
     backgroundColor: '#fff',
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 90,
-    // margin: 0 auto,
+    width: '90%',
+    marginTop: 0,
+    marginHorizontal: 'auto',
     marginBottom: 10,
+    borderRadius: 10,
   },
-  box4Iconcontaner: {
-    position: 'relative',
-    right: 105,
+  box4Text: {
+    color: '#333',
   },
   toDoContent: {
-    display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     flexWrap: 'nowrap',
     alignItems: 'center',
+    flexDirection: 'row',
   },
   toDoContenth3: {
-    marginLeft: 50,
+    fontSize: 25,
+    fontWeight: 'bold',
   },
   toDoContenth4: {
-    marginRight: 50,
-    fontSize: 13,
+    fontSize: 23,
+    fontWeight: 'bold',
+    justifyContent: 'space-evenly',
   },
   toDoContenth4iconContainer: {
-    marginLeft: 10,
+    color: '#fff',
   },
   boxf1: {
     height: 60,
-    backgroundColor: 'rgb(11, 11, 66)',
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    width: 90,
-    // margin: 0 auto,
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    width: '90%',
+    marginTop: 0,
+    marginHorizontal: 'auto',
     marginBottom: 10,
-    color: '#fff',
+    backgroundColor: 'rgb(11, 11, 66)',
+  },
+  boxf1Text:{
+    fontSize: 27,
   },
   boxf2: {
     height: 60,
-    backgroundColor: 'rgb(22, 22, 67)',
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 90,
-    // margin: 0 auto,
+    width: '90%',
+    marginTop: 0,
+    marginHorizontal: 'auto',
     marginBottom: 10,
-    color: '#fff',
     borderRadius: 10,
+    backgroundColor: 'rgb(22, 22, 67)',
+    flexDirection: 'row',
   },
-  boxf2p: {
-    position: 'relative',
-    right: 80,
+  boxfText: {
+    marginRight: 20,
   },
-  boxf2after: {
-    content: 'Missing',
-    fontSize: 12,
-    color: '#fff',
-    marginLeft: 5,
-    position: 'relative',
-    bottom: 29,
-    left: 80,
-    backgroundColor: 'red',
-    borderRadius: 6,
-    // padding: 5 15,
-  },
+
   boxf3: {
     height: 60,
-    backgroundColor: 'rgb(22, 22, 67)',
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 90,
-    // margin: 0 auto,
+    width: '90%',
+    marginTop: 0,
+    marginHorizontal: 'auto',
     marginBottom: 10,
-    color: '#fff',
     borderRadius: 10,
-  },
-  boxf3p: {
-    position: 'relative',
-    right: 80,
-  },
-  boxf3after: {
-    content: 'Success',
-    fontSize: 12,
-    color: '#fff',
-    marginLeft: 5,
-    position: 'relative',
-    bottom: 29,
-    left: 80,
-    backgroundColor: 'red',
-    borderRadius: 6,
-    // padding: 5 15,
+    backgroundColor: 'rgb(22, 22, 67)',
+    flexDirection: 'row',
+
   },
   boxf4: {
     height: 60,
-    backgroundColor: 'rgb(34, 34, 121)',
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    width: 100,
-    // margin: 0 auto,
-    marginBottom: 10,
+    justifyContent: 'space-around',
+    alignItems: 'flex-end',
+    width: '100%',
+    marginTop: 0,
+    marginHorizontal: 'auto',
+    flexDirection: 'row',
+    backgroundColor: 'rgb(22, 22, 67)',
     color: 'gray',
+    fontSize: 100,
+    marginBottom: 12,
+  },
+  boxf4Icon:{
+    fontSize: 30,
+  },
+
+  pseudoSucces: {
+    fontSize: 12,
+    color: '#fff',
+    marginLeft: 5,
+    position: 'relative',
+    bottom: 29,
+    left: 65,
+    backgroundColor: 'green',
+    borderRadius: 6,
+    paddingVertical: 5,
+    paddingHorizontal: 15,
+  },
+  pseudoMissing: {
+    fontSize: 12,
+    color: '#fff',
+    marginLeft: 5,
+    position: 'relative',
+    bottom: 29,
+    left: 65,
+    backgroundColor: 'red',
+    borderRadius: 6,
+    paddingVertical: 5,
+    paddingHorizontal: 15,
   },
 });
 
